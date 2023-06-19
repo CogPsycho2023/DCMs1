@@ -1,0 +1,4 @@
+1. StructuralAndTaskProcessing is the configuration file
+2. Block and AllTrial will call different sub-functions, because different GLM designs
+3. Intensity normalization may have different options (-inm or -ing)
+4. Slice-timing should be careful about the scanning sequence
