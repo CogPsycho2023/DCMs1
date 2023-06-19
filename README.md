@@ -1,1 +1,2 @@
 This project is about DCM task analyses involving preprocessing, fMRI 1st and 2nd analysis, individual timeseries extraction, DCM model specification, single-group and between-group PEB, and Bayesian Data Comparison. For a clear structure, some repeated scripts are skipped but the key scripts are kept for reading.
+Of course,  no pipeline could be perfect. I hope I can update in the future and make them better for readers.
