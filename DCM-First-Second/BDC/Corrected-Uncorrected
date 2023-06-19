@@ -1,0 +1,33 @@
+clear all
+clc
+for GS = {'GSR'}
+    for timing = {'AllTrials','STrials','Block'}
+        for CORR = {'Anti','AntiPro'}
+            list1=load(string(strcat(GS,'/',timing,'Corrected',CORR,'.PEB')))
+            list2=load(string(strcat(GS,'/',timing,'Uncorrected',CORR,'.PEB')))
+            list=intersect(list1,list2)
+            m=1
+            for sub = list'
+                dcms1{m,1} = char(strcat('/home/sfzhang/Documents/20221022BeforeSubmission/2022NovFinalDCM/20221022GSRTimeseries/',timing,'/Corrected/',CORR,'/',num2str(sub),'/DCM_full.mat'))
+                dcms2{m,1} = char(strcat('/home/sfzhang/Documents/20221022BeforeSubmission/2022NovFinalDCM/20221022GSRTimeseries/',timing,'/Uncorrected/',CORR,'/',num2str(sub),'/DCM_full.mat'))
+                m=m+1
+            end
+            
+            GCM1=spm_dcm_load(dcms1)
+
+            GCM2=spm_dcm_load(dcms2)
+
+            GCM={GCM1;GCM2}
+
+            [d,BMA,PEBs]=spm_dcm_bdc(GCM,'B')
+
+            Certainty=d.dcm_negent(:,1) - d.dcm_negent(:,2)
+
+            out=string(strcat('Certainty',timing,CORR,'Sig.mat'))
+
+            save(out,'Certainty')
+            close all
+            clearvars -except timing GS CORR
+        end
+    end
+end
