@@ -1,8 +1,1 @@
-# Sample GitLab Project
-
-This sample project shows how a project in GitLab looks for demonstration purposes. It contains issues, merge requests and Markdown files in many branches,
-named and filled with lorem ipsum.
-
-You can look around to get an idea how to structure your project and, when done, you can safely delete this project.
-
-[Learn more about creating GitLab projects.](https://docs.gitlab.com/ee/gitlab-basics/create-project.html)
+This project is about DCM task analyses involving preprocessing, fMRI 1st and 2nd analysis, individual timeseries extraction, DCM model specification, single-group and between-group PEB, and Bayesian Data Comparison. For a clear structure, some repeated scripts are skipped but the key scripts are kept for reading.
