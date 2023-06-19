@@ -1,0 +1,2 @@
+This folder stores scripts about individual timeseries extraction procedures
+Considering that matlab usage is not very easy in the server, some calculations are done locally
